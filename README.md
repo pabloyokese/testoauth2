@@ -24,3 +24,9 @@ All docker support files are located in the *docker* directory
 - If *jq* is not installed on your system you can simply remove *| jq '.status'* from the *curl* command
 - If you receive an error message from *docker-compose* about an unsupported version of *Dockerfile* please update your *docker-compose* as described [here](https://github.com/docker/compose/releases)
 # testoauth2
+echo "# testoauth2" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/pabloyokese/testoauth2.git
+git push -u origin master

@@ -1,0 +1,20 @@
+version: "3.3"
+services:
+  mongodb:
+    container_name: mongodb
+    image: mongo:3.4
+    expose:
+      - "27017"
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017/customers
+  customers:
+    container_name: customers
+    build: .
+    image: dserradji/customers:0.0.1
+    ports:
+      - "8081:8081"
+      - "8443:8443"
+    depends_on:
+      - mongodb
+
+      
